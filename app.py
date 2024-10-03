@@ -3,6 +3,7 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
+import os
 
 # app config
 st.set_page_config(page_title="AutoPitch", page_icon="🤖")

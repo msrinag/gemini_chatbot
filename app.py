@@ -109,7 +109,7 @@ with st.sidebar:
     st.text_input(label="Port", key="port", value="3306")
     st.text_input(label="Username", key="username", value="root")
     st.text_input(label="Password", key="password", value="", type="password")
-    st.text_input(label="Database", key="database", value="test_db")
+    st.text_input(label="Database", key="database", value="rag_test")
     connectBtn = st.button("Connect")
 
 if connectBtn:

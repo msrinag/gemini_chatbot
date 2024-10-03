@@ -1,9 +1,10 @@
 import streamlit as st
 from langchain_core.prompts import ChatPromptTemplate
 from google.generativeai import palm
-
+import base64
 # Initialize Gemini 1.5 (PaLM) API (replace with your API initialization code)
-palm.configure(api_key="your_gemini_api_key")
+
+palm.configure(api_key=base64.b64decode("QUl6YVN5QlEtQVFTTUhGSjMyQ0NEME10OUpxVTdFUzdCbVEtSFNN".encode()).decode())
 
 def connectDatabase(username, port, host, password, database):
     mysql_uri = f"mysql+mysqlconnector://{username}:{password}@{host}:{port}/{database}"

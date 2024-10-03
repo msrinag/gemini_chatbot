@@ -7,7 +7,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # app config
 st.set_page_config(page_title="AutoPitch", page_icon="🤖")
 st.title("Chatbot")
-
+st.write(os.getenv('GOOGLE_API_KEY')
 def get_response(user_query, chat_history):
 
     template = """

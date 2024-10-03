@@ -2,3 +2,4 @@ streamlit
 langchain-core
 mysql-connector-python
 google-generativeai
+langchain

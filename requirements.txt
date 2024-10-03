@@ -3,3 +3,4 @@ langchain-core
 mysql-connector-python
 google-generativeai
 langchain
+langchain-community

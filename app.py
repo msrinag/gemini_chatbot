@@ -2,6 +2,7 @@ import streamlit as st
 from langchain_core.prompts import ChatPromptTemplate
 import google.generativeai as palm
 import base64
+from langchain_community.utilities import SQLDatabase
 # Initialize Gemini 1.5 (PaLM) API (replace with your API initialization code)
 
 palm.configure(api_key=base64.b64decode("QUl6YVN5QlEtQVFTTUhGSjMyQ0NEME10OUpxVTdFUzdCbVEtSFNN".encode()).decode())

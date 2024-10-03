@@ -1,6 +1,6 @@
 streamlit
 langchain-core
-mysql-connector-python
+
 langchain-google-genai
 langchain
 langchain-community

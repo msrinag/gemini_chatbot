@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain_core.prompts import ChatPromptTemplate
-from google.generativeai import palm
+import google.generativeai as palm
 import base64
 # Initialize Gemini 1.5 (PaLM) API (replace with your API initialization code)
 

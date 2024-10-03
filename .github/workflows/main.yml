@@ -1,1 +1,20 @@
+name: Run Python Script with Secret
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Run Python script with secret
+      env:
+        MY_SECRET_PASSWORD: ${{ secrets.GOOGLE_API_KEY }}  # Your secret
+      run: |
+        python your_script.py

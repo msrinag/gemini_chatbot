@@ -1,7 +1,10 @@
 import streamlit as st
-from langchain_community.chat_models import ChatOllama
+
 from langchain_community.utilities import SQLDatabase
 from langchain_core.prompts import ChatPromptTemplate
+
+from langchain_google_genai import ChatGoogleGenerativeAI
+
 
 
 def connectDatabase(username, port, host, password, database):
@@ -17,8 +20,14 @@ def getDatabaseSchema():
     return st.session_state.db.get_table_info() if st.session_state.db else "Please connect to database"
 
 
-llm = ChatOllama(model="llama3")
-
+llm = ChatGoogleGenerativeAI(
+    model="gemini-1.5-pro",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+    # other params...
+)
 
 def getQueryFromLLM(question):
     template = """below is the schema of MYSQL database, read the schema carefully about the table and column names. Also take care of table or column name case sensitivity.

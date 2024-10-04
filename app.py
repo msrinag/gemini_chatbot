@@ -6,7 +6,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
 # app config
-st.set_page_config(page_title="AutoPitch", page_icon="🤖")
+st.set_page_config(page_title="Gemini Chatbot", page_icon="🤖")
 st.title("Chatbot")
 def get_response(user_query, chat_history):
 
